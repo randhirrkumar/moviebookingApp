@@ -1,0 +1,36 @@
+<app-header></app-header>
+<div class="bootstrap-wrapper">
+  <div class="container">
+    <div *ngIf="movies && movies.length > 0" class="row pt-4">
+      <div class="movie-div">
+        <mat-card style="padding: 10px">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Movie Name</th>
+                <th scope="col">Theatre</th>
+                <th scope="col">Tickets Available</th>
+                <th scope="col">Tickets Booked</th>
+                <th scope="col">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let m of movies; trackBy: trackMovie">
+                <td>{{m.movieName}}</td>
+                <td>{{m.theatreName}}</td>
+                <td>{{m.ticketsAvailable}}</td>
+                <td>{{m.ticketsBooked}}</td>
+                <td><button style="margin:8px;" [routerLink]="['/admin/update-movie/' + m.movieId]"  mat-raised-button color = "primary">Update</button>
+                <button (click)="delete(m.movieId)" mat-raised-button color = "accent">Delete</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </mat-card>
+      </div>
+    </div>
+    <div *ngIf="movies && movies.length == 0">
+      <h1 class="text-white pt-4 text-center">No Movies Available!!</h1>
+    </div>
+    <button class="col col-md-2 offset-md-5 mt20"  routerLink="/admin/add-movie" mat-raised-button color = "primary">Add Movie</button>
+  </div>
+</div>

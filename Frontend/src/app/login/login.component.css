@@ -1,0 +1,16 @@
+.full-width{
+    width: 100%;
+}
+.login-card{
+    width: 50%;
+    margin: auto;
+}
+.bootstrap-wrapper{
+    height: calc(100vh - 64px);
+    background-color: #222539;
+}
+@media(max-width:767px) {
+    .login-card {
+        width: 100%;
+    }
+}

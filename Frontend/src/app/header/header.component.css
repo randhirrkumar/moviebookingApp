@@ -1,0 +1,23 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+a{
+    text-decoration: none;
+    color: white;
+    padding-top: 5px;
+}
+
+.mat-toolbar.mat-primary {
+  background: #333545;
+  color: #fff;
+}
+
+
+.material-symbols-rounded {
+  font-variation-settings:
+  'FILL' 10,
+  'wght' 900,
+  'GRAD' 10,
+  'opsz' 48
+}

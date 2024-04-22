@@ -1,0 +1,16 @@
+.full-width{
+    width: 100%;
+}
+.signup-card{
+    width: 50%;
+    margin: auto;
+}
+.bootstrap-wrapper{
+    background-color: #222539;
+}
+
+@media(max-width:767px) {
+    .signup-card {
+        width: 100%;
+    }
+}
